@@ -28,3 +28,5 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: show list
+        run: ls
