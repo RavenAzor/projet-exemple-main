@@ -4,7 +4,7 @@ on: push
 jobs:
   job-1:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - id: first
         name: Set VAR1
         run: echo "VAR1=Hello" >> $GITHUB_OUTPUT
