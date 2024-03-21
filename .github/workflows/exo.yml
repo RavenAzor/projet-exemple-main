@@ -31,4 +31,4 @@ jobs:
         with:
           name: dist
       - name: show list
-        run: ls
+        run: ls -R
