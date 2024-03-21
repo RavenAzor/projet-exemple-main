@@ -1,5 +1,8 @@
 name: exo-workflow-2
-on: push
+on:
+  push:
+    branches:
+      - main
 jobs:
   first-job:
     name: build and upload
@@ -29,4 +32,4 @@ jobs:
           name: dist
           path: dist
       - name: show list
-        run: dist
+        run: ls
