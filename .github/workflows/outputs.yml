@@ -18,10 +18,10 @@ jobs:
       - id: third
         name: echo VAR1 VAR2
         run: echo ${{ steps.first.outputs.VAR1 }} ${{ steps.second.outputs.VAR2 }}
-    job-2:
-      name: Récupère les param de job-1
-      runs-on: ubuntu-latest
-      needs: job-1
-      steps:
-        - name: echo sortie-1 sortie-2
-          run: echo ${{ needs.job-1.outputs.sortie-1 }} ${{ needs.job-1.outputs.sortie-2 }}
+  job-2:
+    name: Récupère les param de job-1
+    runs-on: ubuntu-latest
+    needs: job-1
+    steps:
+      - name: echo sortie-1 sortie-2
+        run: echo ${{ needs.job-1.outputs.sortie-1 }} ${{ needs.job-1.outputs.sortie-2 }}
