@@ -13,4 +13,4 @@ jobs:
         run: echo "VAR2=world" >> $GITHUB_OUTPUT
       - id: third
         name: echo VAR1 VAR2
-        run: echo ${{ steps.first.outputs.VAR1 }} ${{ steps.first.outputs.VAR2 }}
+        run: echo ${{ steps.first.outputs.VAR1 }} ${{ steps.second.outputs.VAR2 }}
