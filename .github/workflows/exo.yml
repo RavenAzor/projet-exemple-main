@@ -1,0 +1,21 @@
+name: exo-workflow-2
+on: push
+jobs:
+  first-job:
+    name: build and upload
+    runs-on: ubuntu-latest
+    steps:
+      - name: récup code
+        uses: actions/checkout@v4
+      - name: install
+        run: npm install
+      - name: test
+        run: npm run test
+      - name: build
+        run: npm run build
+      - name: upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: .dist/
+          
