@@ -1,6 +1,14 @@
 name: démo outputs
 run-name: "Exécution du workflow ${{github.workflow}} pour le commit ${{github.event.head_commit.message}}"
-on: push
+on:
+  workflow-call:
+    outputs:
+      variable-1:
+        description: Premier output
+        value: ${{jobs.job-1.outputs.sortie-1}}
+      variable-2:
+        description: Deuxième output
+        value: ${{jobs.job-1.outputs.sortie-2}}
 jobs:
   job-1:
     name: Génére des param de sortie
