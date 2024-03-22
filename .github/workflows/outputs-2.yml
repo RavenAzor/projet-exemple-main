@@ -16,4 +16,6 @@ jobs:
       - name: Retourne "Hello world"
         run: echo ${{ needs.premier-job.outputs.variable-1 }} ${{ needs.premier-job.outputs.variable-2 }}
       - name: Afficher le contenu de needs
-        run: echo ${{ needs }}
+        run: echo "$NEEDS_JSON"
+        env:
+          NEEDS_JSON: ${{ toJSON(needs) }}
