@@ -6,7 +6,7 @@ on:
 jobs:
   premier-job:
     name: Appelle le premier workflow
-    uses: RavenAzor/projet-exemple-main/.github/workflows/outputs.yml
+    uses: RavenAzor/projet-exemple-main/.github/workflows/outputs.yml@main
 
   deuxième-job:
     name: Afficher les outputs du premier workflow
